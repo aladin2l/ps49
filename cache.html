@@ -1,0 +1,93 @@
+<html manifest="psfree_lapse.cache">
+  <head>
+    <meta charset="utf-8">
+    <title>PS4 Jailbreak</title>
+    <style>
+      body {
+        background-color: #252526;
+        color: #cccccc;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      #console {
+        font-family: monospace;
+        background-color: #1e1e1e;
+        color: #cccccc;
+        border: 1px solid #3c3c3c;
+        padding: 12px;
+        border-radius: 6px;
+        margin-top: 20px;
+        text-align: center;
+      }
+      #jailbreakBtn {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        background: #555555;
+        color: #aaaaaa;
+        cursor: not-allowed;
+        opacity: 0.7;
+        box-shadow: none;
+      }
+      footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="head">
+        <h1><img src="data:img/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJoAAAAiCAYAAACnZsAPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA7xJREFUeNrsnO2R2jAQhkWGApwOfB04FWAqOKeCgwpyrgCogLsKzqkgpAL7KsAdxFQQd0DkmdXMoshgy1ojYN+Z/XE/MLL87Kd8TI7Ho2CxqPWFt4B1K6DFYCwWOWi5tCYH76VtGTwWdeqMpL0CeH+l/ZK2kBbwVjNoVGrgSqR9IOg40jFo5Eog0uUQ+VgMmjPV0ipDTbeHlMpi0JxoKe2bATYBKTXhR/AYmo4Q0RorWiJY06HuiL6buh4s4d5cKQSz2eOSeA8L30FTOpzZ3IQItnyE+8qkpQOBi8SwkVADwZwAsC2qpTfS1rfSDLRpRhhNqbUAoG3HNyF83pduPICSRm/YBj8jH0Cj6kC/SpsQWGpYv21js9IgrSE69VmPq2jWzD//UDVpfNbZX2+QMrGeLa+lN0MbF/WQhaPnkCoV9BWD5ocODlOV3mCMmSYbuPZa0f8k7eetdZ0sP7XQIliTspeEEwAvIlp1gw/q5QqNh6sRSg4Ff4BKgSdKyHyJaJ8j1SGBowf1Iv6fd717DlgAxf5KG4ukY6Xra4NWGgpr1x78QTw+uEYB37fh2CLnqGHNb2MuYjpSlKjgBgMNsjmxF+fCbtrexUFKKJp9hczkZJkYPmAeBbRm8T/AS0LwjC7KwGLkVdQhe2GAbEkcQX3RGp5TgBwjvaZTTDvClUBtEg2ILjF8foauG4rTM8NP+Ltw4HXPLbDfs2KIYldNk31ACxBcQ+ub/QVAI22jlHaQmmy7If07D3cMWAh1WKLtX+pLVz81LHgluh1DqMgT93zg+ligbAEtASssa7lHeX1cT5MVlAhe1Y4YtC20wJeK+h2085UBji6q4Rq/tWgVthTvMVhxZ4AkLfvbt9mJDNdYaaMMmwipB4tcCzKpBrt+Dxl8rrFsii70egaMDNJYadl1noOrS/1X3RlkgQGEqud9hi17FhOt99x1CwhUKUrjO4i0IQatNowflOYIsAiB0bXrVEcbtUX9p9KAz6Cp98mGjoZSixHLd0Hz9stMezaVOD3/rAyg1VoplcDaapw61QPdGsLmfuCiMzRueBbdXt8u4MayG4lOQ6JIDZDZND07QXN0tDaAtu65ri1Knyc1mlp0AkDEws2wU/1vQNDBQ1WX6SKCpdp3Up3lVaL7PNHkUD7WnoVF6VIix1HHiu+QPsXkwo+8BCg0x4aFFEB6W+E5F+dfqa7QGKMUrLvVpYFtrUHlQjXqXBmuB9HE0c9WtXWPOKJlhq6TxaANgi6GOm8D4OGuk8WgsVg0+ifAAKDN9R9G9U6hAAAAAElFTkSuQmCC" alt=""></h1>
+    </div>
+    <h2><font size="+3">ORMOC GAMING CONSOLE REPAIR JAILBREAK 7.00-9.60 FW</p></font></h2>
+	<center><font style='color:white;font-size:25px;font-weight:bold;margin:0 0 0 0.0;text-shadow:3px 2px #3d3939;'>09066876054</font></center>
+    <div>
+      <button id="jailbreakBtn">Start Jailbreak</button>
+    </div>
+    <pre id="console"></pre>
+    <footer>
+      UI Designed by <strong>Aladin F. Toel</strong>
+    </footer>
+  </body>
+  <script>
+    // Clear history and prevent back navigation
+    history.replaceState(null, null, 'index.html');
+    var histlength = history.length;
+    history.go(-histlength);
+    // Logging utility
+    const outputConsole = document.getElementById("console");
+    window.log = (msg) => { outputConsole.textContent += msg + "\n"; };
+    // Download progress (% display)
+    function DLProgress(e) {
+      const percent = (Math.round((e.loaded / e.total) * 100));
+      window.log(`[CACHE] Downloading... ${percent}% complete.`);
+    }
+    // On cache complete
+    function DisplayCacheProgress() {
+      window.log(" ");
+      window.log("[SUCCESS] Cache installed successfully.");
+      window.log("Page will reload in 3 seconds...");
+      // Delay to show success message before navigation
+      setTimeout(function() { window.log("Reloading..."); }, 2000);
+      // Navigate back to index.html to load the exploit from cache
+      setTimeout(function() { location.reload(); }, 3000);
+    }
+    // Event listeners
+    window.applicationCache.addEventListener("progress", DLProgress, false);
+    window.applicationCache.oncached = function(e) { DisplayCacheProgress(); };
+    window.applicationCache.onupdateready = function(e) { DisplayCacheProgress(); };
+    // Initialization message on DOM load
+    document.addEventListener('DOMContentLoaded', () => {
+      outputConsole.textContent = ""; // Clear console log
+      window.log("AppCache download initiating...");
+      window.log("Please wait, this may take a few seconds.");
+    });
+  </script>
+</html>
